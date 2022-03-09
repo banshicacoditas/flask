@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+ <h2>Register Yourself!</h2>
+ <form action="/savedetails" method="post" autocomplete="off">
+  <table class="table table-striped table-dark">
+   <tr>
+    <td>Emp-ID</td>
+    <td><input type="text" name="id" required></td>
+   </tr>
+   <tr>
+    <td>Name</td>
+    <td><input type="text" name="name" required></td>
+   </tr>
+   <tr>
+    <td>Email</td>
+    <td><input type="email" name="email" required></td>
+   </tr>
+   <tr>
+    <td>Address</td>
+    <td><input type="text" name="address" required></td>
+   </tr>
+   <tr>
+    <td>Age</td>
+    <td><input type="number" name="age" required min="18" max="60"></td>
+   </tr>
+   <tr>
+    <td>Designation</td>
+    <td><input type="text" name="designation" required></td>
+   </tr>
+   <tr>
+    <td>Reporting To</td>
+    <td><input type="text" name="reporting" required></td>
+    </tr>
+    <tr>
+      <tr>
+       <td>Total Experience</td>
+       <td><input type="number" name="experience" required min="0"></td>
+      </tr>
+     <td>Gender</td>
+     <td><input type="radio" name="gender">Male</td>
+     <td><input type="radio" name="gender">Female</td>
+     <td><input type="radio" name="gender">Others</td>
+    </tr>
+   <tr>
+    <td><input type="submit" value="Submit"></td>
+   </tr>
+  </table>
+ </form>
+{% endblock %}
